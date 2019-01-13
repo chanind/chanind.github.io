@@ -143,6 +143,121 @@ document.getElementById('start-button').addEventListener('click', animateCircle)
 
 In the above code, the `animateStep` function calls itself again via `window.requestAnimationFrame(animateStep)` to keep triggering new paint cycles until the animation completes.
 
-The example above is very basic, and in practice you may want to move animation code into a helper function to keep things reusable. Depending on your needs you may need to support things like canceling animations or chaining animations together, which is still doable using the building blocks described above.
+The example above is very basic, and in practice you may want to move animation code into a helper function or class to keep things reusable. Depending on your needs you may need to support things like canceling animations or chaining animations together, which is still doable using the building blocks described above. Below is a simple `SvgTween` class that we can use to simplify animation:
 
-If you need more complicated SVG behavior you can always go back to including a heavyweight SVG library like [SVG.js](https://svgjs.com) or [raphael.js](http://dmitrybaranovskiy.github.io/raphael/), but for most basic SVG manipulation and animation its very easy to get by just using standard browser APIs.
+{% highlight js %}
+const SvgTween = function(node, attrName, attrStartVal, attrEndVal, duration) {
+  this.node = node;
+  this.attrName = attrName;
+  this.attrStartVal = attrStartVal;
+  this.attrEndVal = attrEndVal;
+  this.duration = duration;
+  this.isStarted = false;
+  this.isDone = false;
+  this.startTime = null;
+};
+SvgTween.prototype.start = function() {
+  if (this.isStarted || this.isDone) return;
+  this.isStarted = true;
+  const animateStep = (timestamp) => {
+    if (this.isDone) return;
+    if (!this.startTime) this.startTime = timestamp;
+    const progress = (timestamp - this.startTime) / this.duration;
+    if (progress < 1) {
+      const currentVal = (this.attrEndVal - this.attrStartVal) * progress + this.attrStartVal;
+      this.node.setAttributeNS(null, this.attrName, currentVal);
+      window.requestAnimationFrame(animateStep);
+    } else {
+      this.node.setAttributeNS(null, this.attrName, this.attrEndVal);
+      this.isDone = true;
+    }
+  }
+  window.requestAnimationFrame(animateStep);
+};
+SvgTween.prototype.cancel = function() {
+  this.isDone = true;
+};
+{% endhighlight %}
+
+then, using this class our animation example would become:
+
+{% highlight js %}
+// ...skipping SVG circle setup code from above
+
+let circleTween;
+const animateCircle = () => {
+  if (circleTween) circleTween.cancel();
+  circleTween = new SvgTween(circleNode, 'cx', 50, 150, 1000);
+  circleTween.start();
+}
+
+document.getElementById('start-button').addEventListener('click', animateCircle);
+{% endhighlight %}
+
+<p>
+  <div
+    id="svg-circle-animate-target2"
+    style="width: 200px; height: 100px; box-shadow: 0 0 5px rgba(0,0,0,0.1)">
+  </div>
+  <button id="circle-animate-button2">Animate circle</button>
+</p>
+<script>
+  (function() {
+    const SvgTween = function(node, attrName, attrStartVal, attrEndVal, duration) {
+      this.node = node;
+      this.attrName = attrName;
+      this.attrStartVal = attrStartVal;
+      this.attrEndVal = attrEndVal;
+      this.duration = duration;
+      this.isStarted = false;
+      this.isDone = false;
+      this.startTime = null;
+    };
+    SvgTween.prototype.start = function() {
+      if (this.isStarted || this.isDone) return;
+      this.isStarted = true;
+      const animateStep = (timestamp) => {
+        if (this.isDone) return;
+        if (!this.startTime) this.startTime = timestamp;
+        const progress = (timestamp - this.startTime) / this.duration;
+        if (progress < 1) {
+          const currentVal = (this.attrEndVal - this.attrStartVal) * progress + this.attrStartVal;
+          this.node.setAttributeNS(null, this.attrName, currentVal);
+          window.requestAnimationFrame(animateStep);
+        } else {
+          this.node.setAttributeNS(null, this.attrName, this.attrEndVal);
+          this.isDone = true;
+        }
+      }
+      window.requestAnimationFrame(animateStep);
+    };
+    SvgTween.prototype.cancel = function() {
+      this.isDone = true;
+    };
+
+    const targetDiv = document.getElementById('svg-circle-animate-target2');
+    targetDiv.innerHTML = '';
+    const svgNode = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgNode.setAttributeNS(null, 'viewBox', '0 0 200 100');
+    targetDiv.appendChild(svgNode);
+
+    // create the circle node, set attributes, and append it to the SVG node
+    const circleNode = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circleNode.setAttributeNS(null, 'cx', '50');
+    circleNode.setAttributeNS(null, 'cy', '50');
+    circleNode.setAttributeNS(null, 'r', '40');
+    circleNode.setAttributeNS(null, 'fill', 'blue');
+    svgNode.appendChild(circleNode);
+
+    let circleTween;
+    const animateCircle = () => {
+      if (circleTween) circleTween.cancel();
+      circleTween = new SvgTween(circleNode, 'cx', 50, 150, 1000);
+      circleTween.start();
+    }
+
+    document.getElementById('circle-animate-button2').addEventListener('click', animateCircle);
+  })();
+</script>
+
+You can imagine how this simple SvgTween class could be extended to allow chaining or return promises from animations, or allow tweening multiple attributes together depending on your needs. Of course, if you need more complicated SVG behavior you can always go back to including a heavyweight SVG library like [SVG.js](https://svgjs.com) or [raphael.js](http://dmitrybaranovskiy.github.io/raphael/), but for most basic SVG manipulation and animation its easy to get by just using standard browser APIs.
