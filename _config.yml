@@ -24,9 +24,12 @@ github_username:  chanind
 # Build settings
 markdown: kramdown
 theme: minima
-google_analytics: UA-132773047-1
 plugins:
   - jekyll-feed
+
+google_analytics: UA-132773047-1
+disqus:
+  shortname: chanind-github-io
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
