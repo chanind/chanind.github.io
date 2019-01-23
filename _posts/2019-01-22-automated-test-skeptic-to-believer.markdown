@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How I became a test coverage believer"
+title:  "How I Became a Test Coverage Believer"
 date:   2019-01-22
 categories: software tests
 ---
