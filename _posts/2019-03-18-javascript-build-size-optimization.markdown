@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Extreme JS build size optimization in Hanzi Writer"
+title:  "Javascript build size optimization"
 date:   2019-03-18
 categories: javascript
 ---
