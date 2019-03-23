@@ -14,7 +14,7 @@ When I was building stroke order quizzes in [Hanzi writer](https://chanind.githu
 
 [Fréchet distance](https://en.wikipedia.org/wiki/Fr%C3%A9chet_distance) is a metric which can be used to determine how similar 2 curves are. You can visualize the concept behind Fréchet between curves by imagining a person walking their dog on a leash. The person walks along the path of one of the curves, and the dog walks along the path of the other curve. They each try to vary their speed as they walk to keep the leash as short as possible. The Fréchet distance between the curves, then, is how long the leash must be to allow the person and dog to walk each curve while staying connected.
 
-<image src="/assets/frechet_distance.png" alt="Fréchet distance explanation diagram" />
+<img src="/assets/frechet_distance.png" alt="Fréchet distance explanation diagram" />
 
 ## Calculating Fréchet Distance
 
@@ -77,7 +77,7 @@ Unfortunately, Fréchet distance doesn't only depend on the shape of the two cur
 
 Before beginning with Procrustes analysis, we need to redistribute the points along our curves so they're evenly spaced. For any given curve, you can add more points to some parts of the curve and less in others while still maintaining the same general shape of the curve. For example, the curves below are identical but have different distributions of points:
 
-<image src="/assets/points_distribution.png" alt="Diagram showing different distributions of points along te same curve" />
+<img src="/assets/points_distribution.png" alt="Diagram showing different distributions of points along te same curve" />
 
 This is a problem because when we try to normalize the curves based on the mean and RMS of the points of the curve, the 2 curves above will be translated and scaled differently despite both being identically shaped!
 
