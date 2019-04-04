@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flagrant Anti-trust Abuse in Chinese Tech"
+title:  "Anti-trust Abuse in Chinese Tech"
 date:   2019-04-04
 categories: china
 ---
