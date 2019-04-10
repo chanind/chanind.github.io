@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "996, Github, and China's digital workers rights awakening"
+title: "996, Github, and China's Digital Workers Rights Awakening"
 date: 2019-04-10
 categories: china
 ---
