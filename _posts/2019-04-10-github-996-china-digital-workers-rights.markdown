@@ -15,4 +15,4 @@ Ironically, given that China is a communist country, workers' rights movements a
 
 At the time of writing, the [996 website](https://996.icu) isn't blocked in China, but greedy tech companies have decided to block it themselves. Tencent's Wechat refuses to open the site, as does Alibaba's UC Browser and Qihoo's 360 browser. It seems Chinese tech companies don't want their employees getting the idea that they should be treated fairly. Given the popularity of the 996 repo, though, it seems that the word is getting out.
 
-Tech workers of the world, unite!
+## Tech workers of the world, unite!
