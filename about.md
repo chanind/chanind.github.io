@@ -10,4 +10,6 @@ Hi, I'm David, a full stack developer working at [EF Hello](https://efhello.com)
 [Hanzi Writer](https://chanind.github.io/hanzi-writer), a javascript library
 for Chinese character stroke animations and quizzes, and I built [Wordsheet.io](https://wordsheet.io) as well.
 
+If you're in London, check out the [Developing and Deploying Apps for China Meetup](https://www.meetup.com/Developing-and-Deploying-Apps-for-China/)!
+
 You can find me on [Github](https://github.com/chanind), [LinkedIn](https://www.linkedin.com/in/davidchanin), or by email at [chanindav@gmail.com](mailto:chanindav@gmail.com).
