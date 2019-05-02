@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Geting Your Team to Write Tests"
+title: "Geting Your Team to Adopt Testing"
 date: 2019-05-02
 categories: tests
 ---
