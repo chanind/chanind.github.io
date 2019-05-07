@@ -61,7 +61,7 @@ The data and scripts used here are available at [https://github.com/chanind/hn_p
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 
 <script type="text/javascript">
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
   formatRow = (row) => `${days[row.weekday]} ${row.hour.toString().padStart(2, '0')}:00`
   $(document).ready(() => {
     $.getJSON('/assets/hn_time_counts.json', (data) => {
