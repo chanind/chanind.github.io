@@ -51,7 +51,7 @@ Next, I exported these results as JSON and wrote a quick script to get the final
 
 <br />
 
-Interestingly, this analysis comes up with the opposite answer compared with the [article from 2017](https://medium.com/@mi.schaefer/what-is-the-best-time-to-post-to-hacker-news-829fad3eac71) - it's best to post on weekends and times of low activity for Hacker News so as to minimize the competition that your post will face. Articles posted on Sunday, 6am UTC are 2.5x more likely to make it to the front page than posting on Wednesday, 9am UTC. Of course, these posts will likely get less views than posting at a more popular time, so it's a tradeoff.
+Interestingly, this analysis comes up with the opposite answer compared with the [article from 2017](https://medium.com/@mi.schaefer/what-is-the-best-time-to-post-to-hacker-news-829fad3eac71) - it's best to post on weekends and times of low activity for Hacker News so as to minimize the competition that your post will face. Articles posted on Sunday, 6am UTC are 2.5x more likely to make it to the front page than posting on Wednesday, 9am UTC. Of course, these frontpage posts will likely get less views than frontpage posts at a more popular time, so it's a tradeoff.
 
 The data and scripts used here are available at [https://github.com/chanind/hn_post_time_analysis](https://github.com/chanind/hn_post_time_analysis)
 
