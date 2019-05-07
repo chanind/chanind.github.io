@@ -71,7 +71,7 @@ The data and scripts used here are available at [https://github.com/chanind/hn_p
           {
             data: 'hour_num',
             render: (val, type, row) => {
-              if (type === 'display') {
+              if (type === 'display' || type === 'filter') {
                 return formatRow(row);
               }
               return val;
