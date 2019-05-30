@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why You Should Make your GraphQL API Relay-Compatible"
+title: "Make your GraphQL API Relay-Compatible"
 date: 2019-05-30
 ---
 
