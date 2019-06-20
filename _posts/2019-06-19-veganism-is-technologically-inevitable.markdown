@@ -2,6 +2,7 @@
 layout: post
 title: "Veganism is Technologically Inevitable"
 date: 2019-06-19
+published: false
 ---
 
 It's the year 2150. Humanity has mastered spaceflight and developed permanent colonies throughout most of the solar system. The most advanced spacecraft travel at 1/3 the speed of light, and can carry thousands of people for decades at a time. And when those people get hungry, they... go down to the bottom of the spacecraft, find a cow (the most advanced spacecrafts all have cows onboard of course), kill it and make a hamburger out of it. Humanity is able to manipulate matter to the point that nearly any material can be printed from raw atoms and energy - including any food - but they still raise and slaughter animals for food anyway for some reason. Just printing your food from a 3D-printer is too efficient and convenient, afterall.
