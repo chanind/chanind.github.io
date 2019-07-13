@@ -4,7 +4,7 @@ title: "Veganism is Technologically Inevitable"
 date: 2019-06-19
 ---
 
-In this post, I will lay out an argument that if we assume technology continues to progress, then at some point veganism becomes inevitable as it becomes first possible and then ubiquitous to create meat and dairy without animals. This argument does not assume a timeline on when this change will happen, whether it's in 20 years or 200 years, but past a certain level of technological development it becomes increasingly implausible that humanity would continue to raise animals as a means to create food.
+In this post, I will lay out an argument that if we assume technology continues to progress, then at some point veganism becomes inevitable as it becomes possible to create meat and dairy without animals. This argument does not assume a timeline on when this change will happen, whether it's in 20 years or 200 years, but past a certain level of technological development it becomes increasingly implausible that humanity would continue to raise animals as a means to create food.
 
 ## Meat without animals
 
