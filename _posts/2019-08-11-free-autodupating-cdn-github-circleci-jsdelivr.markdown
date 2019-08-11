@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bulding an auto-updating CDN for Free with GitHub, CircleCI, and JsDelivr"
+title: "Bulding an Auto-updating CDN for Free with GitHub, CircleCI, and JsDelivr"
 date: 2019-08-11
 ---
 
