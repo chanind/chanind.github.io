@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'The "Would I Stab This to Death" Theory of Vegetarianism'
+title: 'Vegetarianism'
 date: 2019-04-28
 categories: vegetarianism
 ---
@@ -19,7 +19,7 @@ I forced myself to watch because, as someone who eats meat, I told myself that I
 
 The meat that night was incredible. It was as fresh as it could be, and roasted over an open fire. Deep-down I knew I wasn't OK with the lamb being slaughtered, and that if I followed the logic of that statement then I shouldn't be eating meat. For the next few years I resolved this quandry by just not thinking about it. I wouldn't allow myself to follow the logic of what I was doing. I would just mentally put all the ethical issues it raised in a box and keep it locked up somewhere deep in the back of my mind.
 
-Eventually I decided this wasn't acceptable, and so I've been trying to be vegetarian. I kept thinking about that lamb, and that question of whether or not I'd be willing to kill it. I've been using this as a guiding principle - the "Would I stab this to death?" theory of vegetarianism. That is - if I'd be ethically willing to commit the act necessary for the food I'm eating then I'm OK with eating it. Would I stab a wheat plant to death? You bet I would! I wouldn't even feel bad doing it. Would I cut a lambs neck though to eat meat? I'm not OK with that, so I won't eat meat. Would I milk a cow to be able to make cheese? Yeah, I'm OK with that - I wouldn't feel too bad milking a cow.
+Eventually I decided this wasn't acceptable, and so I've been trying to be vegetarian. I kept thinking about that lamb, and that question of whether or not I'd be willing to kill it. I've been using this as a guiding principle - the "Would I feel bad killing this animal?" theory of vegetarianism. That is - if I'd be ethically willing to commit the act necessary for the food I'm eating then I'm OK with eating it. Would I stab a wheat plant to death? You bet I would! I wouldn't even feel bad doing it. Would I cut a lambs neck though to eat meat? I'm not OK with that, so I won't eat meat. Would I milk a cow to be able to make cheese? Yeah, I'm OK with that - I wouldn't feel too bad milking a cow.
 
 It's such a bizarre reality that in wealthy countries it's possible - even normal - to eat meat every day without ever having to see or think about where it comes from. Meat is just something that comes in nicely labeled, shrink-wrapped packages in the supermarket. You can go your whole life without ever being forced to think through the ethics of what you're doing.
 
