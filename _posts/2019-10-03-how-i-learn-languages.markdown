@@ -4,7 +4,7 @@ title: "How I Learn Languages"
 date: 2019-10-03
 ---
 
-Language learning is hard, but it's tractable if you know how to study and build the right habits and environments to learn. Likewise, if you don't build the right habits or don't view language learning correctly you simply will not learn. I've studied 4 languages in-depth so far at various points in my life. I stared with French in school, then Japanese in university, then Spanish, and now Chinese (Mandarin). I don't consider myself "good" at languages. It takes me a _lot_ of hours of consistent practice to improve. Below I'll first discuss about some of the myths a lot of people believe around language learning, and then I'll discuss how I think about language learning, and how to be successful at learning. First, the myths:
+Language learning is hard, but it's tractable if you know how to study and build the right habits and environments to learn. Likewise, if you don't build the right habits or don't view language learning correctly you simply will not learn. I've studied 4 languages at various points in my life; I stared with French in school, then Japanese in university, then Spanish, and now Chinese (Mandarin). I don't consider myself "good" at languages. It takes me a _lot_ of hours of consistent practice to improve. Below I'll first discuss about some of the myths a lot of people believe around language learning, and then I'll discuss how I think about language learning, and how to be successful at learning. First, the myths:
 
 ### Myth: You will naturally "pick up" a language if it's spoken around you
 
@@ -28,7 +28,7 @@ Taking traditional language classes is great for this as well, since if you're t
 
 Learning a language means learning speaking, listening, reading, and writing. If you master all of these skills, you will have mastered the language. These skills do all reinforce each other, but they are separate skills that each need attention. It's very possible to be amazing at reading and writing but be completely incapable of having even a simple conversation with a native speaker. I studied French for 7 years in school, but when I first visited France I found I couldn't understand anything anyone was saying, and couldn't think fast enough to respond. After a few months of watching French media and forcing myself to speak with locals I was able to improve a lot in speaking and listening to the point I could hold conversations.
 
-Each of these skills will be reinforced by different activities. If you want to practice speaking, have conversations with native speakers. For listening, try watching videos in your target language If you want to practive reading, find articles in that language online. For writing, try chatting in the language online or taking a class where a teacher can correct what you write.
+Each of these skills will be reinforced by different activities. If you want to practice speaking, have conversations with native speakers. For listening, try watching videos in your target language. If you want to practive reading, find articles in that language online. For writing, try chatting in the language online or taking a class where a teacher can correct what you write.
 
 ### Spend time memorizing vocab
 
@@ -40,6 +40,6 @@ Most languages have a finite amount of grammar. You just need to learn it all an
 
 ### Go to language meetups, find a language partner, and/or live abroad
 
-There's still no substitute for interacting with native speakers. Fortuntely, it's not hard to do, especially if you're a native English speaker. Most cities will have a meetup for practicing the language you want to learn, and if not, you can start one! You can also try to find someone who's learning your language and set up a regular time to spend time with them where you talk 50% in your language and 50% in theirs. Of course, nothing beats living in the country whose language you want to learn if you can, but again, you _need_ to focus on studying while you're there or you still won't make progress.
+There's still no substitute for interacting with native speakers. Fortunately, it's not hard to do, especially if you're a native English speaker. Most cities will have a meetup for practicing the language you want to learn, and if not, you can start one! You can also try to find someone who's learning your language and set up a regular time to spend time with them where you talk 50% in your language and 50% in theirs. Of course, nothing beats living in the country whose language you want to learn if you can, but again, you _need_ to focus on studying while you're there or you still won't make progress.
 
 ### Good luck, and good studying!
