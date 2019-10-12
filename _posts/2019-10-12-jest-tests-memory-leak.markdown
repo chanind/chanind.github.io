@@ -5,7 +5,7 @@ date: 2019-10-12
 categories: javascript
 ---
 
-Jest is designed in a way that makes memory leaks likely if you're not actively trying to squash them. For many test suites this isn't a problem because even if tests leak memory, the tests don't use enough memory to actually cause a crash. That is, until you add one more test and suddenly the suite comes apart. In this article, we'll walk through why it's so easy for Jest to leak memory, how to tell if your tests have a memory leak, and then how to debug and eliminate leaks in your test suite. Even if you don't use Jest, it's still useful to understand the process in case you need to debug memory leaks in other javascript code.
+Jest is designed in a way that makes memory leaks likely if you're not actively trying to squash them. For many test suites this isn't a problem because even if tests leak memory, the tests don't use enough memory to actually cause a crash. That is, until you add one more test and suddenly the suite comes apart. In this article, we'll walk through why it's so easy for Jest to leak memory, how to tell if your tests have a memory leak, and then how to debug and eliminate leaks in your tests. Even if you don't use Jest, it's still useful to understand the process in case you need to debug memory leaks in other javascript code.
 
 ## Why does Jest leak memory?
 
