@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Case for Banning Advertising in Social Media"
-date: 2019-10-28
+date: 2019-10-29
 ---
 
 Social media has been at the center of a number of firestorms around everything from being intentionally addicting, to making people unhappy, to gleefully spreading misinformation and destabilizing democracies around the world. While almost everyone can agree that something must be done, there's not a lot of agreement on what exactly it should be. In this article, I will argue that the core of all these issues is the advertising business model itself, and that banning ads on social media platforms entirely would go a long way to fixing these problems, or at least making it possible to fix these problems. The core of the problem is that maximizing advertising revenue requires maximizing time-in-app and engagement above all else.
