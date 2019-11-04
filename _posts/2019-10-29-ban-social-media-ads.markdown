@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Case for Banning Advertising in Social Media"
+title: "Ban All Ads in Social Media"
 date: 2019-10-29
 ---
 
