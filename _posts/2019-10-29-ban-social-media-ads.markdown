@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ban All Ads in Social Media"
+title: "Just Ban All The Ads"
 date: 2019-10-29
 ---
 
@@ -24,7 +24,7 @@ Furthermore, the scale of usage of social media is staggering. A 2018 study foun
 
 Social media's relentless push to increase user engagement to sell more ads also means finding the content that gets the most engagement and spreading it as widely and quickly as possible. Not surprisingly, the content that gets the most engagement is content that causes fear or outrage, which is perfect to spread political misinformation. Social networks like Facebook claim they're not a publisher and thus do none of the editorial work that traditional news organizations do to ensure the content on the platform is based on fact. At the same time this is happening, more and more people are using social media as their main news source. A 2016 study found that [a majority of people in the US now get their news from social media](https://www.journalism.org/2016/05/26/news-use-across-social-media-platforms-2016/).
 
-Social media has been criticized for its role in [spreading misinformation in the 2016 US election](https://www.bbc.com/news/technology-46590890), but it has been used extensively outside of the US as well, sometimes with lethal results. Facebook was used effectively to [spread anti-Rohingya propaganda, resulting in murder, rape, and massive human migration](https://www.nytimes.com/2018/10/15/technology/myanmar-facebook-genocide.html) as part of the Rohingya genocide in Myanmar. In India, Whatsapp (owned by Facebook) has been used to spread misinformation which resulted in [numerous public lynchings](https://en.wikipedia.org/wiki/Indian_WhatsApp_lynchings).
+Social media has been criticized for its role in [spreading misinformation in the 2016 US election](https://www.bbc.com/news/technology-46590890), but it has been used extensively outside of the US as well, sometimes with lethal results. For instance, Facebook was used effectively to [spread anti-Rohingya propaganda, resulting in murder, rape, and massive human displacement](https://www.nytimes.com/2018/10/15/technology/myanmar-facebook-genocide.html) as part of the Rohingya genocide in Myanmar.
 
 Beyond outright misinformation, social media also polarizes society into extreme groups that make discussion and compromise in a democracy harder. Facebook has come under criticism for [creating echo chambers](https://qz.com/1648409/facebook-axed-trending-when-it-should-have-just-fixed-it/) where political views are repeatedly reinforced and made more extreme. Youtube has been shown to keep providing users with more and more extreme videos to keep them engaged, [resulting in radicalization](https://www.nytimes.com/interactive/2019/06/08/technology/youtube-radical.html).
 
@@ -32,7 +32,7 @@ As long as social media platforms are funded by advertising they won't be able t
 
 ## Political ads: misinformation turbocharged for a small fee
 
-Social media platforms also make it easy to just directly pay for political ads to spread misinformation and polarization for a small fee. These ads can be highly targeted, and thus it's easy to send vastly different, even conflicting, messages to different groups. What's more, Facebook recently announced that their official policy is that politicians are allowed to flagrantly lie in political ads. This is just the most egregious example of political advertising policy gone wrong, but this is a logical extension of funding social media with advertising. After all, if you're going to allow political ads to fund social media, then where should they draw the line on what's allowed in advertising? Facebook has decided there should be no line whatsoever (this also coincidentally maximizes Facebook's profits).
+Social media platforms also make it easy to just directly pay for political ads to spread misinformation and polarization for a small fee. These ads can be highly targeted, and thus it's easy to send vastly different, even conflicting, messages to different groups. What's more, Facebook recently announced that their official policy is that politicians are allowed to flagrantly lie in political ads. This is just the most egregious example of political advertising policy gone wrong, but this is a logical extension of funding social media with advertising. After all, if you're going to allow political ads to fund social media, then where should they draw the line on what's allowed in advertising? Facebook has decided there should be no line whatsoever; incriminatingly, this stance also maximizes Facebook's profits by taking as much money from as many PACs and political organizations as possible.
 
 The argument for allowing political ads on social media is that Facebook and other platforms would otherwise need to decide what's a political ad and what's not, what's considered misinformation and what's not. So long as Facebook is funded by advertising, why not just open the floodgates and allow everything through? And anyway, Facebook needs to maximize its ad profits, so it's in their interest to allow every ad possible on the platform.
 
@@ -40,6 +40,6 @@ If ads were banned on social media, then this entire class of problem goes away.
 
 ## Ban the ads!
 
-All of the problems outlined above can either be solved outright or made much easier to solve if the advertising business model is made illegal for social media. Social media platforms should make their profits by doing what's best for users and society, not by doing whatever maximizes ad revenue. There's no way that social media platforms can take this step on their own - their ad-based profits are too intoxicating for them to stop voluntarily.
+All of the problems outlined above can either be solved outright or made much easier to solve if the advertising business model is made illegal for social media. There's no way that social media platforms can take this step on their own - their ad-based profits are too intoxicating for them to stop voluntarily.
 
 This would likely cut social media companies' profits in the short term, but they will find other ways of making money. One could imagine going back to the old Whatsapp model of charging users $1 per year, or some other model. Youtube already has a paid subscription service users can purchase. Social media companies have smart people working there, and a massive userbase. They'll figure it out. In the end, banning ads in social media will free it from the shackles of the ad-based business model and allow these companies to truly make the world a better place for all, rather than just for advertisers.
