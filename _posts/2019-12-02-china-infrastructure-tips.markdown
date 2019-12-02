@@ -11,7 +11,7 @@ If you're building an API or service that needs to work in China, you typically 
 
 In my experience, when I'm connected to a VPN or proxy near China, for example in Hong Kong or even Singapore, requests to services in China tend to fail much less frequently. Tasks will still be slower than if you didn't need to cross the firewall at all, but it's definitely a much more pleasant experience than dealing with failed uploads and broken websites.
 
-## Use Hong Kong as an hub
+## Use Hong Kong as a hub
 
 Pushing docker images or large files from outside of China onto a server in China likely won't work. However, much like the tip above, I find its easiest to use a nearby datacenter location as an intermediate ground for pushing large files. For instance, I find it's best to push docker images to a registry in Hong Kong and then pull those images down on servers in China. That way, the upload from your CI outside of China to Hong Kong is still fast, and pulling the images from Hong Kong to servers in China also tends to work relatively smoothly as well.
 
