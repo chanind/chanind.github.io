@@ -2,6 +2,7 @@
 layout: post
 title: "Tips for Running Infrastructure in China"
 date: 2019-12-02
+categories: china
 ---
 
 If you're building an API or service that needs to work in China, you typically need to run infrastructure in China. The Chinese Great Firewall blocks a large portion of requests that go through it seemingly at random, and for others slows the requests to a crawl. As a result, you may find that interacting via the web UI of Chinese cloud providers may give network errors, and even making API requests via Terraform can result in random failures.  When you try to push a docker image from CI outside of China onto a server in China you may discover the upload fails or takes upwards of an hour. Fortunately, not all is lost! Below are a few tips for making your life easier working with infrastructure running in China.
