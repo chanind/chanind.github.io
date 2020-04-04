@@ -5,6 +5,8 @@ date: 2020-04-04
 categories: javascript
 ---
 
+<img src="/assets/mootools.png" alt="Mootools" width="300px" style="margin-bottom:30px;" />
+
 When I first started doing web development, I started using [prototype.js](http://prototypejs.org/) and its animations library [scriptaculous](https://script.aculo.us/) (amazingly, these sites are still up in 2020). Dealing with web browser inconsistencies was horrible, but Prototype papered over all of it and made working in the web a lot nicer. And the animations you could do with scriptaculous blew my mind at the time. It was so easy to make things pop in or out, fade in our out. All my friends were impressed.
 
 Then, the JS framework wars began. There was YUI, Dojo, Mootools, jQuery, and, of course, Prototype. I still stuck with Prototype at first, but started experimenting with YUI for their widgets. YUI is now dead, but holy crap their widgets were great. They definitely had the best widgets of 2009 IMHO, but I digress...
