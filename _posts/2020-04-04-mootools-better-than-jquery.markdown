@@ -39,7 +39,7 @@ Finally, around 2015, I started learning React. In retrospect, I think this is t
 
 ### Flow
 
-Adding types into JS started to get really popular around 2016, with Typescript and Flow. Naturally, I decided Flow looked great since it was just a simple annotation that could be added to JS files, so decided I'd use that for everything. Then, Facebook proceeded to not take Flow very seriously, and the project floundered. Great, now I have a bunch of useless Flow code ot rewrite in Typescript...
+Adding types into JS started to get really popular around 2016, with Typescript and Flow. Naturally, I decided Flow looked great since it was just a simple annotation that could be added to JS files, so decided I'd use that for everything. Then, Facebook proceeded to not take Flow very seriously, and the project floundered. Great, now I have a bunch of useless Flow code to rewrite in Typescript...
 
 ### 🎉 GraphQL
 
