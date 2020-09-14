@@ -13,4 +13,7 @@ As an American, I find the international news section the most interesting, sinc
 
 If there's a controversial topic outside of China, I'll often try searching some keywords on TouTiao to get a sense of what the mainstream views in China are on the subject. For example, searching "[政治正确](https://www.toutiao.com/search/?keyword=%E6%94%BF%E6%B2%BB%E6%AD%A3%E7%A1%AE)", which means "Political Correctness", is truly fascinating. Suffice it to say Chinese media is not very woke.
 
+<div><img src="/assets/pc_tou_tiao.png" alt="TouTiao search results" style="max-width: 600px;"/></div>
+<i class="small">A recent search for political correctness on TouTiao</i>
+
 I'll typically look at TouTiao about once a week just to get a sense of what's being talked about in China. It's easy enough to follow without speaking Chinese just using the built-in Google translate in Chrome, and it's always a fascinating read. Enjoy!
