@@ -20,6 +20,10 @@ Online language-learning exercise creator
 
 Explore gender bias in word vectors
 
+# [Reddit Words](https://chanind.github.io/reddit-words/)
+
+What did Spacy's sense2vec 2019 word vectors learn from Reddit?
+
 <br />
 ### Projects by Friends
 
