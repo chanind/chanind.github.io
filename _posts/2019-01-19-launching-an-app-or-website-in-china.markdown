@@ -5,6 +5,8 @@ date:   2019-01-19
 categories: china
 ---
 
+*Updated 2021-06-10*
+
 Wait, what do you mean make my app/site *work* in China? I don't have to do anything to make my app work in the US or Singapore or Kenya or anywhere else, and I didn't make the Chinese government angry, so it should just work in China, right? Sadly, it's not so simple. If your app/website servers aren't hosted from within China, then, for all intents and purposes, it's blocked. I mean, it will probably technically load, but will be excruciatingly, unusably slow. And sometimes it will just not load at all for hours at a time. This is true for all services hosted outside of the firewall, even in Hong Kong.
 
 ### The Firewall
@@ -19,11 +21,11 @@ If you want to have any infrastructure working in China, you need to apply for a
 
 ### Option 1: Cloudflare China Acceleration
 
-The easiest option to get your services working in China is to go use [Cloudflare's China acceleration](https://www.cloudflare.com/network/china/). Cloudflare partnered with Baidu to extend their acceleration network with points inside of China itself. Going through this method allows requests into and out of China to bypass the firewall, so your service will be fast. Cloudflare China acceleration requires an enterprise account though, so it's going to be pricey.
+The easiest option to get your services partially working in China is to go use [Cloudflare's China acceleration](https://www.cloudflare.com/network/china/). Cloudflare partnered with Baidu to extend their acceleration network with points inside of China itself. This method will give you a CDN inside of China, but requests through the firewall may still potentially fail since Cloudflare doesn't do any proxying of request through the firewall. Static assets will be fast though, and the overall experience for users in China will still be a big improvement. Cloudflare China acceleration requires an enterprise account as well, so it's going to be pricey.
 
 Using Cloudflare does effectively allow you to host your infrastructure outside of China, but depending on your business it might not be entirely legal. That's because China has strict [data protection laws](https://www.chinalawblog.com/2018/05/china-data-protection-regulations-cdpr.html), and in many cases you must store Chinese users' data inside of China. If you're not a huge company or don't have much sensitive data on Chinese users this may not be an issue, but it's something to be aware of.
 
-If most of your customers are outside of China and you just want to make sure your app/website loads quickly in China, then this is likely the best option for you.
+If most of your customers are outside of China and you just want to make sure your app/website loads reasonably in China, and are OK if it has occasional poor performance, then this is likely the best option for you.
 
 ### Option 2: Make a Separate Chinese Version of your App/Website
 
