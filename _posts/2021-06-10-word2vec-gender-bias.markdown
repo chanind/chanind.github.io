@@ -54,7 +54,7 @@ test_word_projection = np.dot(word_vectors[test_word], gender_vector)
 
 mean_projection = (mean_male_projection + mean_female_projection) / 2
 # scale the score so > 0 means female bias, < 0 means male bias
-test_word_score = 2 * test_word_projection - mean_projection / (mean_female_projection - mean_male_projection)
+test_word_score = 2 * (test_word_projection - mean_projection) / (mean_female_projection - mean_male_projection)
 ```
 
 ## Using PCA to find the gender vector
@@ -96,7 +96,7 @@ test_word_projection = pca.transform(np.array([word_vectors[test_word]]))[0][0]
 
 mean_projection = (mean_male_projection + mean_female_projection) / 2
 # scale the score so > 0 means female bias, < 0 means male bias
-test_word_score = 2 * test_word_projection - mean_projection / (mean_female_projection - mean_male_projection)
+test_word_score = 2 * (test_word_projection - mean_projection) / (mean_female_projection - mean_male_projection)
 ```
 
 ## Wait, why do most words have a male bias?
