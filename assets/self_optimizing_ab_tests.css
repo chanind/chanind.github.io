@@ -1,0 +1,160 @@
+.hidden {
+  display: none;
+}
+
+.BinomialPdf {
+  border: 1px solid #EEE;
+}
+.BinomialPdf-graph {
+  height: 250px;
+  border-bottom: 1px solid #EEE;
+}
+.BinomialPdf-controls {
+  padding: 10px; 
+  display: flex;
+}
+.BinomialPdf-control {
+  flex-grow: 1;
+  display: flex;
+}
+.BinomialPdf-controlText {
+  font-size: 14px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+.BinomialPdf-pVal {
+  font-weight: normal;
+  font-family: monospace;
+}
+
+
+.BetaConversionPdf {
+  border: 1px solid #EEE;
+}
+.BetaConversionPdf-graph {
+  height: 250px;
+  border-bottom: 1px solid #EEE;
+}
+.BetaConversionPdf-controls {
+  padding: 10px; 
+  display: flex;
+}
+.BetaConversionPdf-control {
+  flex-grow: 1;
+  display: flex;
+}
+.BetaConversionPdf-controlText {
+  font-size: 14px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+
+.ConversionSampler {
+  border: 1px solid #EEE;
+  display: flex;
+}
+.ConversionSampler-outputPane {
+  min-width: 100px;
+  border-left: 1px solid #EEE;
+  flex-grow: 1;
+  height: 275px;
+  position: relative;
+  overflow: hidden;
+}
+.ConversionSampler-outputScroll {
+  overflow-y: scroll;
+  height: 100%;
+}
+.ConversionSampler-actions {
+  padding: 10px;
+}
+.ConversionSampler-sampleButton {
+  padding: 11px 21px;
+  background-color: #2185d0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.ConversionSampler-sampleButton:active {
+  background-color: #1a69a4;
+}
+.ConversionSampler-sampleButton:hover {
+  background-color: #1678c2;
+}
+.ConversionSampler-sampleButton:focus {
+  background-color: #0d71bb;
+}
+.ConversionSampler-clearButton {
+  padding: 11px 21px;
+  background-color: #e0e1e2;
+  color: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.ConversionSampler-clearButton:active {
+  background-color: #babbbc;
+}
+.ConversionSampler-clearButton:hover {
+  background-color: #cacbcd;
+}
+.ConversionSampler-clearButton:focus {
+  background-color: #cacbcd;
+}
+.ConversionSampler-sample {
+  padding: 10px;
+  border-bottom: 1px solid #EEE;
+}
+.ConversionSampler-sampleVariationConversion {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 5px;
+}
+.ConversionSampler-sampleWinner {
+  font-style: italic;
+  color: #999;
+  font-size: 12px;
+  margin-top: 3px;
+}
+.ConversionSampler-sampleCounts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.ConversionSamplerVariation {
+  display: flex;
+}
+.ConversionSamplerVariation-leftPane {
+  padding: 10px;
+}
+.ConversionSamplerVariation-title {
+  font-size: 20px;
+}
+.ConversionSamplerVariation-control {
+  display: block;
+}
+.ConversionSamplerVariation-controlText {
+  width: 130px;
+  display: inline-block;
+}
+.ConversionSamplerVariation {
+  border-bottom: 1px solid #EEE;
+}
+.ConversionSamplerVariation:last-of-type {
+  border-bottom: none;
+}
+.ConversionSamplerVariation-graph {
+  width: 200px;
+  min-height: 100%;
+}
