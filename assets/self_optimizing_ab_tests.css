@@ -36,12 +36,13 @@
   border-bottom: 1px solid #EEE;
 }
 .BetaConversionPdf-controls {
-  padding: 10px; 
   display: flex;
+  flex-wrap: wrap;
 }
 .BetaConversionPdf-control {
   flex-grow: 1;
   display: flex;
+  margin: 10px;
 }
 .BetaConversionPdf-controlText {
   font-size: 14px;
@@ -55,10 +56,10 @@
   display: flex;
 }
 .ConversionSampler-outputPane {
-  min-width: 100px;
+  min-width: 150px;
   border-left: 1px solid #EEE;
   flex-grow: 1;
-  height: 275px;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -77,6 +78,7 @@
   border-radius: 4px;
   cursor: pointer;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 .ConversionSampler-sampleButton:active {
   background-color: #1a69a4;
@@ -157,4 +159,15 @@
 .ConversionSamplerVariation-graph {
   width: 200px;
   min-height: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .ConversionSamplerVariation-graph {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .ConversionSamplerVariation-graph {
+    display: none;
+  }
 }

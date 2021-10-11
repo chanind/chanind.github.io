@@ -9,14 +9,19 @@ class BinomialPdf {
 
     this.render();
 
-    this.pSlider.addEventListener('change', this.render.bind(this));
-    this.pSlider.addEventListener('input', this.render.bind(this));
-    this.nInput.addEventListener('change', this.render.bind(this));
+    this.pSlider.addEventListener('change', () => this.render());
+    this.pSlider.addEventListener('input', () => this.render());
+    this.nInput.addEventListener('change', () => this.render(true));
+    this.nInput.addEventListener('input', () => this.render(false));
   }
 
-  render() {
+  render(fixNan = true) {
     const p = parseFloat(this.pSlider.value)
     let n = parseInt(this.nInput.value)
+    if (fixNan && Number.isNaN(n)) {
+        n = -1;
+    }
+    if (Number.isNaN(n)) return;
     if (n > 1000) {
       n = 1000;
       this.nInput.value = 1000;
@@ -92,13 +97,22 @@ class BetaConversionPdf {
 
     this.render();
 
-    this.numConversionsInput.addEventListener('change', this.render.bind(this));
-    this.numTrialsInput.addEventListener('change', this.render.bind(this));
+    this.numConversionsInput.addEventListener('change', () => this.render(true));
+    this.numConversionsInput.addEventListener('input', () => this.render(false));
+    this.numTrialsInput.addEventListener('change', () => this.render(true));
+    this.numTrialsInput.addEventListener('input', () => this.render(false));
   }
 
-  render() {
+  render(fixNan = true) {
     let numTrials = parseFloat(this.numTrialsInput.value)
     let numConversions = parseInt(this.numConversionsInput.value)
+    if (fixNan && Number.isNaN(numTrials)) {
+      numTrials = -1;
+    }
+    if (fixNan && Number.isNaN(numConversions)) {
+      numConversions = -1;
+    }
+    if (Number.isNaN(numTrials) || Number.isNaN(numConversions)) return;
     if (numTrials < 1) {
       numTrials = 1;
       this.numTrialsInput.value = 1;
@@ -237,13 +251,13 @@ class ConversionSampler {
         </div>
       `
     })
-    const variationCountsHtml = `
+    const variationCountsHtml = this.samples.length === 0 ? '' : `
       <div class="ConversionSampler-sampleCounts">
         ${variationCountHtmlSnippets.join("\n")}
       </div>
     `
 
-    const sampleScrollHtml = `
+    const sampleScrollHtml = this.samples.length === 0 ? '' : `
       <div class="ConversionSampler-outputScroll">
         ${sampleHtmlSnippets.join("\n")}
       </div>
@@ -262,10 +276,10 @@ class ConversionSamplerVariation {
 
     this.render();
 
-    this.numConversionsInput.addEventListener('change', this.render.bind(this));
-    this.numConversionsInput.addEventListener('input', this.render.bind(this));
-    this.numTrialsInput.addEventListener('change', this.render.bind(this));
-    this.numTrialsInput.addEventListener('input', this.render.bind(this));
+    this.numConversionsInput.addEventListener('change', () => this.render(true));
+    this.numConversionsInput.addEventListener('input', () => this.render(false));
+    this.numTrialsInput.addEventListener('change', () => this.render(true));
+    this.numTrialsInput.addEventListener('input', () => this.render(false));
   }
 
   get numTrials() {
@@ -280,9 +294,16 @@ class ConversionSamplerVariation {
     return this.titleElm.textContent;
   }
 
-  render() {
+  render(fixNan = true) {
     let numTrials = parseFloat(this.numTrialsInput.value)
     let numConversions = parseInt(this.numConversionsInput.value)
+    if (fixNan && Number.isNaN(numTrials)) {
+      numTrials = -1;
+    }
+    if (fixNan && Number.isNaN(numConversions)) {
+      numConversions = -1;
+    }
+    if (Number.isNaN(numTrials) || Number.isNaN(numConversions)) return;
     if (numTrials < 1) {
       numTrials = 1;
       this.numTrialsInput.value = 1;

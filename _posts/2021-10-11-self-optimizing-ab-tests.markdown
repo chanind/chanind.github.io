@@ -52,11 +52,11 @@ This formulation naturally starts off with a lot of uncertainty when `num_trials
     <div class="BetaConversionPdf-controls">
       <label class="BetaConversionPdf-control">
         <span class="BetaConversionPdf-controlText">num conversions</span>
-        <input type="number" value="10" min="1" step="1" class="BetaConversionPdf-numConversions">
+        <input type="number" value="10" min="1" max="1000000" step="1" class="BetaConversionPdf-numConversions">
       </label>
       <label class="BetaConversionPdf-control">
         <span class="BetaConversionPdf-controlText">num trials</span>
-        <input type="number" value="100" min="1" step="1" class="BetaConversionPdf-numTrials">
+        <input type="number" value="100" min="1" step="1" max="1000000" class="BetaConversionPdf-numTrials">
       </label>
     </div>
   </div>
