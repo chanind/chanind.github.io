@@ -129,7 +129,7 @@ conversion_rate_with_prior ~ Beta(1 + adjusted_num_conversions, 1 + adjusted_num
 
 ## Working with 3+ variations
 
-There's nothing about this method that requires only using 2 A/B test variations. For instance, imagine you have 1000 products that you sell, and you want to determine which of those products to show on your homepage to generate the most sales. You could follow this method for all 1000 products and sort them by sampled conversion rate for each user who visits your site. As you get more data about conversions, the products with the highest conversion rates will natrually flow to the top of the homepage more and more often, while still allowing products that don't have a lot of view to show up occasionally until the system has learned more about their real conversion rates.
+There's nothing about this method that requires only using 2 A/B test variations. For instance, imagine you have 1000 products that you sell, and you want to determine which of those products to show on your homepage to generate the most sales. You could follow this method for all 1000 products and sort them by sampled conversion rate for each user who visits your site. As you get more data about conversions, the products with the highest conversion rates will natrually flow to the top of the homepage more and more often, while still allowing products that don't have a lot of views to show up occasionally until the system has learned more about their real conversion rates.
 
 ## Final notes
 
