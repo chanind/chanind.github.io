@@ -10,7 +10,7 @@ This all works fine locally when I build and run the Docker image locally, and i
 
 After a few hours of tearing my hair out, when I was beginning to question my sanity, I noticed that the ENV variables that were set in Docker when it was run in Cloud Run were ever-so-slightly different from what they were when I run Docker locally. Specifically, Cloud Run sets `HOME=/home` when running the docker image, but `HOME=/root` when building. On local docker, `HOME=/root` is set for the entire time. It's extremely bizarre, and I couldn't find much info on this behavior aside from a [Stack Overflow post](https://stackoverflow.com/questions/62276734/google-cloud-run-changes-home-to-home-for-cmd-where-run-uses-root) noting this.
 
-As it turns out, Huggingface caches downloaded models under the `~/.cache/` dir. During the Docker build step that corresponds to `~/root/.cache`, but on Cloud Run during execution, it corresponds to `~/home/.cache`, which of course won't have any model in it. To fix this, I just set: `ENV HOME=/home` in the Dockerfile before it downloads the model, so that `~/.cache` is always `~/home/.cache` no matter whether it's run in Cloud Run or anywhere else.
+As it turns out, Huggingface caches downloaded models under the `~/.cache/` dir. During the Docker build step that corresponds to `/root/.cache`, but on Cloud Run during execution, it corresponds to `/home/.cache`, which of course won't have any model in it. To fix this, I just set: `ENV HOME=/home` in the Dockerfile before it downloads the model, so that `~/.cache` is always `/home/.cache` no matter whether it's run in Cloud Run or anywhere else.
 
 Hopefully this post saves someone else from having to debug this in the future!
 
