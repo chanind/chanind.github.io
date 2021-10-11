@@ -13,7 +13,7 @@ for Chinese character stroke animations and quizzes.
 You can find me on [Github](https://github.com/chanind), [LinkedIn](https://www.linkedin.com/in/davidchanin), or by email at [chanindav@gmail.com](mailto:chanindav@gmail.com).
 
 ### Work with me!
-I'm interested in doing a PhD in NLP in 2022, and would love to work with
-researchers doing NLP work in the meantime. Please reach out at
+I'm interested in doing a PhD in ML/AI in 2022, and would love to work with
+researchers doing work in the meantime. Please reach out at
 [chanindav@gmail.com](mailto:chanindav@gmail.com) if you have a
 project I can be a part of.
