@@ -16,7 +16,7 @@
 title: chanind.github.io
 email: chanindav@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Javascript, Python, DevOps, and China
+  Machine Learning, Javascript, Python, and DevOps
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://chanind.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  chanind
