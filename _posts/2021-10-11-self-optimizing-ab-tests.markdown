@@ -64,7 +64,7 @@ This formulation naturally starts off with a lot of uncertainty when `num_trials
 Notice how the distribution gets much narrower as num trials gets higher, reflecting more certainty about the underlying conversion rate. For instance, when setting `num_trials = 10, num_successes = 1`, the most likely conversion rate is 10%, but there's a wide range of possibilities, anywhere up to 50% is still plausible. However at `num_trials = 1000, num_successes = 100`, the most likely conversion rate is still 10%, but there range of possible conversion rates is much narrower, only really between 8% and 12% are plausible.
 
 ## Sample from the Beta distribution to pick which A/B variation to show
-We have a probabilistic model of the conversion rate of each variation of an A/B test, but how can we use this to choose which A/B variation to show to each user?The simplest way to do this is to sample a value of the conversion rate from our model for each variation, and then select the variation that had the highest sampled conversion rate. Sampling just means choosing a single random point according to the shape of the probability distribution. This effectively turns picking which variation to show each user into a [Monte Carlo experiment](https://en.wikipedia.org/wiki/Monte_Carlo_method).
+We have a probabilistic model of the conversion rate of each variation of an A/B test, but how can we use this to choose which A/B variation to show to each user? The simplest way to do this is to sample a value of the beta distribution for conversion rate for each A/B variation, and then select the variation that had the highest sampled conversion rate. Sampling just means choosing a single random point according to the shape of the probability distribution. This effectively turns picking which variation to show each user into a [Monte Carlo experiment](https://en.wikipedia.org/wiki/Monte_Carlo_method).
 
 By doing this, if our A/B variations both have a lot of data already collected, then our model of their conversion rate will be pretty narrow and the variation with the higher conversion rate will be selected the vast majority of the time. Likewise, if we haven't collected a lot of data yet for our A/B test variations then we'll expect to get a wide range of conversion rates when we sample and we'll get a good mix of each A/B test variation. As we get more and more data, then the test naturally converges to picking the winning variation more and more often, without us needing to do anything! Plus, we'll start showing variations that look more promising more and more frequently automatically, so we won't be missing out on conversions we could have gotten by picking the winning variation sooner.
 
@@ -134,7 +134,7 @@ There's nothing about this method that requires only using 2 A/B test variations
 ## Final notes
 
 - In order for this to work well, the conversions and trials data for each A/B variation needs to be kept up to date so the system can keep adjusting its estimates of the underlying conversion rate of each A/B variation as time progresses.
-- This post uses [jStat](https://jstat.github.io/) for statiscal calculations in Javascript and [highcharts](https://www.highcharts.com/) for the charts.
+- This post uses [jStat](https://jstat.github.io/) for statistical calculations in Javascript and [highcharts](https://www.highcharts.com/) for the charts.
 
 <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
