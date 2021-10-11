@@ -59,13 +59,17 @@
   min-width: 150px;
   border-left: 1px solid #EEE;
   flex-grow: 1;
-  height: 300px;
   position: relative;
   overflow: hidden;
 }
 .ConversionSampler-outputScroll {
   overflow-y: scroll;
-  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-bottom: 100px;
 }
 .ConversionSampler-actions {
   padding: 10px;
@@ -110,6 +114,9 @@
 .ConversionSampler-sample {
   padding: 10px;
   border-bottom: 1px solid #EEE;
+}
+.ConversionSampler-sampleVariation {
+  font-size: 14px;
 }
 .ConversionSampler-sampleVariationConversion {
   font-weight: bold;
@@ -168,6 +175,9 @@
 }
 @media only screen and (max-width: 450px) {
   .ConversionSamplerVariation-graph {
+    display: none;
+  }
+  .ConversionSampler-sampleVariationWinner {
     display: none;
   }
 }

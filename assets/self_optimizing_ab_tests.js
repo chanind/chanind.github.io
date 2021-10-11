@@ -232,7 +232,7 @@ class ConversionSampler {
         <div class="ConversionSampler-sampleVariation">
           <span class="ConversionSampler-sampleVariationTitle">${variation.title}</span>
           <span class="ConversionSampler-sampleVariationConversion">${variation.conversionRate.toFixed(3)}</span>
-          ${variation.title === sample.winner ? '✔️' : ''}
+          <span class="ConversionSampler-sampleVariationWinner">${variation.title === sample.winner ? '✔️' : ''}</span>
         </div>
       `)
       return `
