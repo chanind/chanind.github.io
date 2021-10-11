@@ -196,7 +196,9 @@ class ConversionSampler {
     this.clearButton.addEventListener('click', this.onClear.bind(this));
   }
 
-  onSample() {
+  onSample(evt) {
+    evt.preventDefault();
+    evt.stopPropagation();
     let winner;
     let maxConversionRate = -1;
     const variationSamples = this.variations.map(variation => {
