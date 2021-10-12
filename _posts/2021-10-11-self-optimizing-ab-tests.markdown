@@ -10,7 +10,7 @@ There's always a trade-off when running A/B tests. Until you're certain which va
 
 There's another way to run A/B tests to address this. The basic idea is that if you're 60% sure that variant A is better than variant B, why not show variant A 60% of the time? As more data is gathered and you're more and more certain about the conversion rates of variants A and B, then the portion of users shown the winning variant should slowly climb towards 100%.
 
-This post will go into more detail about this idea and the math behind how it works.
+The technique we'll use to address this is called [Thompson Sampling](https://en.wikipedia.org/wiki/Thompson_sampling), and this post will go into more detail about this idea and the math behind how it works.
 
 ## A/B conversion follows a binomial distribution
 When running an A/B test, what we're really trying to do is estimate the conversion rate of each item in our test, and then pick the item with the best conversion rate. However, we can't directly observe the conversion rate - all we can observe are trials and conversions, and then based on that we guess what the conversion rate really is.
@@ -134,7 +134,14 @@ There's nothing about this method that requires only using 2 A/B test variations
 ## Final notes
 
 - In order for this to work well, the conversions and trials data for each A/B variation needs to be kept up to date so the system can keep adjusting its estimates of the underlying conversion rate of each A/B variation as time progresses.
+- This problem is known as a [Multi-Armed Bandit](https://en.wikipedia.org/wiki/Multi-armed_bandit)
+- This technique works well as long as the conversion rate of each variation stays constant over time. If the conversion rate changes over time, there are more optimal solutions. A simple tweak is to limit the data to only look at recent trials and conversions for each variation.
 - This post uses [jStat](https://jstat.github.io/) for statistical calculations in Javascript and [highcharts](https://www.highcharts.com/) for the charts.
+
+## Updates (2021-10-12)
+- Added in a reference to Thompson Sampling, thanks to [isoprophlex on HN](https://news.ycombinator.com/item?id=28840705)
+- Added in a note that this only works if the conversion rates for each A/B variation are constant thanks to [sweezyjeezy on HN](https://news.ycombinator.com/item?id=28839703)
+- Added in a reference to the Multi-Armed Bandit thanks to [Normal_gaussian on HN](https://news.ycombinator.com/item?id=28839004)
 
 <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
