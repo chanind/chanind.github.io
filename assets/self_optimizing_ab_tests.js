@@ -153,7 +153,10 @@ class BetaConversionPdf {
       yAxis: {
           title: {
               text: 'Probability'
-          }
+          },
+          tickAmount: 0,
+          gridLineWidth: 0,
+          labels: { enabled: false },
       },
       plotOptions: {
         series: {
