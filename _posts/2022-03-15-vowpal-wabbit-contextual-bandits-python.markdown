@@ -5,6 +5,10 @@ date: 2022-03-15
 categories: ai
 ---
 
+<div style="text-align: center; margin-bottom: 40px;">
+    <img src="/assets/vw_logo.svg" alt="vowpal wabbit logo" style="max-width: 200px" />
+</div>
+
 Over the past few weeks I've been using [Vowpal Wabbit](https://vowpalwabbit.org/) (VW) to develop contextual bandit algorithms in Python. Vowpal Wabbit's core functionality is excellent and it appears to be the industry standard for working with bandits. However, the library is not well documented and has numerous gotchas and partially-working features, especially in the Python bindings. The library overall feels like it was built by academics rather than engineers, so the documentation treats most of the core engineering tasks as trivial and not worth explaining, while frequenly linking off to 50-page long academic research papers as explanations of what the options in the library mean.
 
 As an engineer, there's a lot I've learned that I wish I knew when I first started using this library. This post is a brain-dump of what I've learned that's been useful, important, or surprising for me working with this library. I hope it will be useful for others as well! the core functionality of the library is truly excellent, it just takes a bit of effort to get it into a state where it can really shine.
