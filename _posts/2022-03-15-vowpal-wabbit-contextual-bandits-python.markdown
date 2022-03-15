@@ -5,13 +5,13 @@ date: 2022-03-15
 categories: ai
 ---
 
-Over the past few weeks I've been using [Vowpal Wabbit](https://vowpalwabbit.org/) (VW) to develop contextual bandit algorithms in Python. While Vowpal Wabbit is a powerful library and appears to be the industry standard for working with bandits, the library is not well documented and has numerous gotchas and partially-working features, especially in the Python bindings. The library overall feels like it was built by academics rather than engineers, so the documentation treats most of the core engineering tasks as trivial and not worth explaining, while frequenly linking off to 50-page long academic research papers as explanations of what the options in the library mean.
+Over the past few weeks I've been using [Vowpal Wabbit](https://vowpalwabbit.org/) (VW) to develop contextual bandit algorithms in Python. Vowpal Wabbit's core functionality is excellent and it appears to be the industry standard for working with bandits. However, the library is not well documented and has numerous gotchas and partially-working features, especially in the Python bindings. The library overall feels like it was built by academics rather than engineers, so the documentation treats most of the core engineering tasks as trivial and not worth explaining, while frequenly linking off to 50-page long academic research papers as explanations of what the options in the library mean.
 
-As an engineer, there's a lot I've learned that I wish I knew when I first started using this library. This post is a brain-dump of what I've learned that's been useful, important, or surprising for me working with this library. I hope it will be useful for others as well! the core functionality of the library is truly excellent, it just takes a bit of effort to get it into a production-ready state where it can really shine.
+As an engineer, there's a lot I've learned that I wish I knew when I first started using this library. This post is a brain-dump of what I've learned that's been useful, important, or surprising for me working with this library. I hope it will be useful for others as well! the core functionality of the library is truly excellent, it just takes a bit of effort to get it into a state where it can really shine.
 
-This post will focus on working with the Python bindings, but a most of this will be apply to working with the command-line interface as well, since the Python wrapper is just a thin wrapper around the CLI. I used the `--cb_explore_adf` setting, which is the most complicated, least documented, and, in my opinion, most useful setting for bandits. This setting allows for picking from a different set of actions at each invocation of the library, and allows actions to have rich sets of features as well. This post will focus on using this setting, but a lot of this post will still be relevant for using other bandit settings in vowpal wabbit as well.
+This post will focus on working with the Python bindings, but a most of this will apply to working with the command-line interface as well, since the Python wrapper is just a thin wrapper around the CLI. I used the `--cb_explore_adf` setting, which is the most complicated, least documented, and, in my opinion, most useful setting for bandits. This setting allows for picking from a different set of actions at each invocation of the library, and allows actions to have rich sets of features as well. This post will focus on using this setting, but a lot of this post will still be relevant for using other bandit settings in vowpal wabbit as well.
 
-If you see any mistakes or places where there are misunderstanding in this post, please leave a comment and let me know! I'm still learning and will continue to make corrections and improvements to this article as I learn more.
+If you see any mistakes or places where there are misunderstandings in this post, please leave a comment and let me know! I'm still learning and will continue to make corrections and improvements to this article as I learn more.
 
 ### Working with JSON Format
 
@@ -22,7 +22,7 @@ shared | UserAge:15
 0:3:.3 | Sourcewww topic:4
 ```
 
-You should probably just use this standard format in Python too, because it appears to be a lot better documented. VW also supports a [JSON input format](https://github.com/VowpalWabbit/vowpal_wabbit/wiki/JSON), which would look like the following:
+VW also supports a [JSON input format](https://github.com/VowpalWabbit/vowpal_wabbit/wiki/JSON), which would look like the following:
 
 ```json
 {
@@ -92,7 +92,7 @@ vw.learn(json.dumps(example))
 
 ### Namespaces
 
-You should put all your features into namespaces rather than on the top level, since this lets you make your model more powerful with the `--quadratic` and `--cubic` options as we'll see later. For instance, putting shared features into a namespace called "User", and action features into a namespace called "Action", although you can have multiple shared and action-level namespaces if you want. In JSON, this looks like the following:
+You should put all your features into namespaces rather than on the top level, since this lets you make your model more powerful with the `--quadratic` and `--cubic` options as we'll see later. For instance, below we put shared features into a namespace called "User", and action features into a namespace called "Action", although you can have multiple shared and action-level namespaces if you want. In JSON, this looks like the following:
 
 ```json
 {
@@ -120,7 +120,7 @@ This is just a simple linear combination of the features passed in, which is ver
 
 The default model architecture is almost never going to give good results, so you need to tweak the the model architecture to allow it to learn a better estimator. One of the simplest yet still powerful ways to do that is via the `--quadratic` or `-q` option. This option allows you to generate new features from every combination of features in namespaces.
 
-The syntax to do this is pretty strange, you need to take the first letter of the name of each namespace and pass a 2-character string after `-q` to indicate which 2 namespaces to mix together. In our case above where we have an `Action` namespace at a `User` namespace, we could mix them by `-q UA`. We could even do `-q UU` to mix the `User` namespace with itself. You can also pass `-q` multiple times with different combinations of namespaces. You can use `:` to indicate everything across all namespaces. So `-q U:` would mix the `User` namespace with everything across all namespaces.
+The syntax to do this is pretty strange, you need to take the first letter of the name of each namespace and pass a 2-character string after `-q` to indicate which 2 namespaces to mix together. In our case above where we have an `Action` namespace at a `User` namespace, we could mix them with `-q UA`. We could even do `-q UU` to mix the `User` namespace with itself. You can also pass `-q` multiple times with different combinations of namespaces. You can use `:` to indicate everything across all namespaces. So `-q U:` would mix the `User` namespace with everything across all namespaces.
 
 If you want generate features by mixing 3 namespaces together, you can use `--cubic` like `--cubic UAC` or `--cubic UUA`. If you want to mix more than 3 namespace permutations together, you can use `--interactions` to specify any number of namespaces to mix together. For example `--interactions UAXBY` to mix 5 namespaces together.
 
@@ -134,13 +134,13 @@ In addition to mixing features together, you can a use simple feed-forward neura
 
 ### Evaluating Different Model Settings / Params
 
-Vowpal Wabbit is extremely fast to train, which is nice because it makes it easy to test out lots of different model settings using offline policy evaluation. There's a good tutorial on how to do this on the [vowpal wabbit website](https://vowpalwabbit.org/docs/vowpal_wabbit/python/latest/tutorials/off_policy_evaluation.html), so I won't go into too much detail here, but I found offline policy evaluation essential to figuring out which model params to use to get good results.
+Vowpal Wabbit is extremely fast to train, which is nice because it makes it easy to test out lots of different model settings using offline policy evaluation (OPE). There's a good tutorial on how to do this on the [vowpal wabbit website](https://vowpalwabbit.org/docs/vowpal_wabbit/python/latest/tutorials/off_policy_evaluation.html), so I won't go into too much detail here, but I found offline policy evaluation essential to figuring out which model params to use to get good results.
 
 One thing that confused me at first was that OPE outputs what it calls "average loss", but really this means "average cost". If you use negative cost like I did, then "average loss" will be negative. In all cases, the lower the number for "average loss" the better, even if it's negative.
 
 Make sure to try out lots of different settings for things like learning rate (`-l`) and number of passes over the data (`--passes`) as well. I also found `--cover 1` seems to work much better than `--cover 3` for some reason.
 
-In Python, I found that you can use the `vw.get_sum_loss()` method after doing a test run and dividing by the number of test samples to get the "average loss" which is output by the CLI method, if you want to do this in Python.
+In Python, I found that you can use the `vw.get_sum_loss()` method after doing a test run and dividing by the number of test samples to get the "average loss" which is output by the CLI method, if you want to do this in Python rather than using the CLI.
 
 ### Python Quirks
 
@@ -148,7 +148,7 @@ There are a number of strange quirks with the Python wrapper. It doesn't always 
 
 For JSON input, you need to run the Python dict examples through `json.dumps` first before passing to vowpal wabbit
 
-There are also methods that when called in python just print stuff out to stdout instead of returning a value which is obnoxious. For instance it's not currently possible to get the results from `--audit` into a string in Python for further processing. If you don't pass `--quiet`, the python library will just print stuff to stdout and stderr as it runs. As far as I can tell, there's no good way to get at this data in a more natural Python interface.
+There are also methods that just print stuff out to stdout instead of returning a value which is obnoxious. For instance it's not currently possible to get the results from `--audit` into a string in Python for further processing. If you don't pass `--quiet`, the python library will just print stuff to stdout and stderr as it runs. As far as I can tell, there's no good way to get this data into a more natural Python interface.
 
 ### Python Tips
 
