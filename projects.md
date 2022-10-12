@@ -8,6 +8,14 @@ permalink: /projects/
 
 Chinese character stroke order animations and practice quizzes
 
+# [AMR Logic Converter](https://github.com/chanind/amr-logic-converter)
+
+Convert Abstract Meaning Representation (AMR) into first-order logic
+
+# [AMR Logic Converter](https://github.com/fuzzy-reasoner/fuzzy-reasoner)
+
+Simple symbolic reasoner which supports fuzzy unification
+
 # [Curve Matcher](https://github.com/chanind/curve-matcher)
 
 Curve matching using Fréchet distance and Procrustes analysis in JS
