@@ -31,8 +31,3 @@ Explore gender bias in word vectors
 # [Reddit Words](https://chanind.github.io/reddit-words/)
 
 What did Spacy's sense2vec 2019 word vectors learn from Reddit?
-
-<br />
-### Projects by Friends
-
-[The Liquor Project](https://theliquorproject.co.uk/) - Built by my friend [Jonathan](https://github.com/ionTea)
