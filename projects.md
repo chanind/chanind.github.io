@@ -12,7 +12,7 @@ Chinese character stroke order animations and practice quizzes
 
 Convert Abstract Meaning Representation (AMR) into first-order logic
 
-# [AMR Logic Converter](https://github.com/fuzzy-reasoner/fuzzy-reasoner)
+# [Fuzzy Reasoner](https://github.com/fuzzy-reasoner/fuzzy-reasoner)
 
 Simple symbolic reasoner which supports fuzzy unification
 
