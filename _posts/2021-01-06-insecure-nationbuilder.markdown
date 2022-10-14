@@ -9,15 +9,15 @@ Given how often hacks of political campaigns are in the news, you would think th
 
 ### No Two-Factor Auth
 
-The baseline of security features you would expect from a product housing sensitive data is two-factor auth (2fa). Yet, there is no way to set up 2fa in Nationbuilder. This is so glaring that an [article in Wired praising nationbuilder](https://www.wired.co.uk/article/nationbuilder-political-data) from 2019 even pointed this security flaw at the bottom of the article. 
+The baseline of security features you would expect from a product housing sensitive data is two-factor auth (2fa). Yet, there is no way to set up 2fa in Nationbuilder. This is so glaring that an [article in Wired praising nationbuilder](https://www.wired.co.uk/article/nationbuilder-political-data) from 2019 even pointed this security flaw at the bottom of the article.
 
 > NationBuilder does not offer a two-factor authentication log-in option – problematic if you are handling sensitive voter data. A company spokesperson says that the issue is “on our radar”.
 
 It's been 2 years since that article was written, and there's still no sign of 2fa in Nationbuilder.
 
-### No Secure Hashing or HMAC Functions
+### ~~No Secure Hashing or HMAC Functions~~
 
-Nationbuilder uses Liquid templates for its themeing system, so it's reasonable to expect it to have the same standard security-focused hashing functions available in most Liquid variants, like [sha256](https://shopify.dev/docs/themes/liquid/reference/filters/string-filters#sha256) and [hmac_sha256](https://shopify.dev/docs/themes/liquid/reference/filters/string-filters#hmac_sha256). These filters aren't present, and [Nationbuilder has no plans to add them](https://nationbuilder.com/xdjc/when_will_nationbuilder_liquid_support_the_hmac_sha256_filter). Instead, the only hashing function available is an undocumented `md5` filter, which, of course, is not secure.
+Update: _As of Nov 2021, Nationbuilder now has support for `hmac_sha256`, `sha256`, and `hmac_sha1` filters, and recently added `hmac_sha512` as well! 🎉_
 
 ### No JSON Escape Function
 
