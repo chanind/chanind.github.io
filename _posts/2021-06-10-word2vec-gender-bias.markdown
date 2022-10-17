@@ -22,7 +22,7 @@ gender_pairs = [
   ...
 ]
 gender_vectors = [
-  word_vectors[pair[0]] - word_vectors[pair[0]]
+  word_vectors[pair[0]] - word_vectors[pair[1]]
   for pair in gender_pairs
 ]
 gender_vector = np.mean(gender_vectors, axis=0)
