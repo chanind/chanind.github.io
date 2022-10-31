@@ -18,7 +18,7 @@ First, sign up for a free Ngrok account at [ngrok.com](https://ngrok.com). After
 Next, ssh into Grid Engine and install ngrok in your home directory. This should look something like below:
 
 ```bash
-# paste the linux download URL for ngrok here, it may be different that what's below
+# paste the linux download URL for ngrok here, it may be different than what's below
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 tar -xvzpf ngrok-v3-stable-linux-amd64.tgz
 ```
