@@ -5,7 +5,7 @@ date: 2021-06-10
 categories: nlp
 ---
 
-I've always found the idea of word vectors fascinating. Word vectors (also called word embeddings) turn a word into an array of numbers, and makes it possible to do *math* on *words*. For instance, you can [add and subtract words from each other](https://www.sciencedirect.com/science/article/abs/pii/0010028573900236) to get new words, like `"Tokyo" - "Japan" + "France" ~= "Paris"`. Less ideally, they also learn the biases about words that are present in the text the word vectors were trained from, as famously expressed in the paper [Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings](https://proceedings.neurips.cc/paper/2016/file/a486cd07e4ac3d270571622f4f316ec5-Paper.pdf). This paper showed how it's possible to mathematically analyze the gender bias in word vectors and see which words have a male or female bias.
+I've always found the idea of word vectors fascinating. Word vectors (also called word embeddings) turn a word into an array of numbers, and makes it possible to do _math_ on _words_. For instance, you can [add and subtract words from each other](https://www.sciencedirect.com/science/article/abs/pii/0010028573900236) to get new words, like `"Tokyo" - "Japan" + "France" ~= "Paris"`. Less ideally, they also learn the biases about words that are present in the text the word vectors were trained from, as famously expressed in the paper [Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings](https://proceedings.neurips.cc/paper/2016/file/a486cd07e4ac3d270571622f4f316ec5-Paper.pdf). This paper showed how it's possible to mathematically analyze the gender bias in word vectors and see which words have a male or female bias.
 
 The paper presents ideas to remove the bias from word vectors, but I was curious instead to use what the word vectors had learnend to try to understand the gender bias in words in English. I created a project called [Word2Vec Gender Bias Explorer](https://chanind.github.io/word2vec-gender-bias-explorer) which lets you browse the gender bias in any words you enter as present in the original [Google News Word2Vec dataset](https://code.google.com/archive/p/word2vec/). In this article, I'll go through how this works, and the problems I ran into buiding the explorer. This project uses Word2Vec word vectors, but it should also work just as well with other word vector types like Glove.
 
@@ -112,10 +112,3 @@ Most words have a bias that makes sense, but there are a few words that seems to
 ## Go forth and explore!
 
 The final result is online at [chanind.github.io/word2vec-gender-bias-explorer](https://chanind.github.io/word2vec-gender-bias-explorer), and you can see all the codoe at [github.com/chanind/word2vec-gender-bias-explorer](https://github.com/chanind/word2vec-gender-bias-explorer). If you have any ideas to improve the code please open an issue or submit a pull request. Contributions and improvements are always welcome!
-
-### *Shameless plug*
-
-I'm interested in doing a PhD in NLP in 2022, and would love to work with
-researchers doing NLP work in the meantime. Please reach out at
-[chanindav@gmail.com](mailto:chanindav@gmail.com) if you have a
-project I can be a part of!
