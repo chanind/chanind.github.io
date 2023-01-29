@@ -20,6 +20,7 @@ If you see any mistakes or places where there are misunderstandings in this post
 ### Working with JSON Format
 
 The default VW input format is a string format that looks like the following:
+
 ```
 shared | UserAge:15
 | elections maine SourceTV
@@ -30,17 +31,18 @@ VW also supports a [JSON input format](https://github.com/VowpalWabbit/vowpal_wa
 
 ```json
 {
- "UserAge":15,
- "_multi":[
-   {"_text":"elections maine", "Source":"TV"},
-   {"Source":"www", "topic":4, "_label":"0:3:.3"}
- ]
-} 
+  "UserAge": 15,
+  "_multi": [
+    { "_text": "elections maine", "Source": "TV" },
+    { "Source": "www", "topic": 4, "_label": "0:3:.3" }
+  ]
+}
 ```
 
 I went with the JSON format since it feels more structured, but this has been hard since this format isn't super well documented. This JSON format is only valid JSON for individual examples. If you want to use it for more than a single example, you need to concat JSON examples with newlines between them, NOT use a JSON array, as you would probably expect. For example:
 
 Correct:
+
 ```
 {
  "User": ...
@@ -49,14 +51,15 @@ Correct:
 {
  "User": ...
  "_multi":[...]
-} 
+}
 {
  "User": ...
  "_multi":[...]
-} 
+}
 ```
 
 Incorrect:
+
 ```
 [
     {
@@ -73,6 +76,7 @@ Incorrect:
     }
 ]
 ```
+
 This was a surprise, because the "correct" way to use the JSON format here is to not actually valid JSON! Also, if you use this format you need to pass the `--json` param to VW.
 
 There's another json format called `--dsjson`. This is even less documented than the `--json` format, so I wasn't able to figure out how to use it.
@@ -100,16 +104,17 @@ You should put all your features into namespaces rather than on the top level, s
 
 ```json
 {
- "User": { "age": 15 },
- "_multi":[
-   {"Action": {"_text":"elections maine", "Source":"TV"}},
-   {"Action": {"Source":"www", "topic":4 }, "_label":"0:3:.3"}
- ]
+  "User": { "age": 15 },
+  "_multi": [
+    { "Action": { "_text": "elections maine", "Source": "TV" } },
+    { "Action": { "Source": "www", "topic": 4 }, "_label": "0:3:.3" }
+  ]
 }
 ```
+
 Note: the `_label` property appears outside of the namespace for the action that was chosen.
 
-I was originally pretty confused by the format of `_label` for `--cb_explore_adf`. The label has 3 components, the action number, the cost, and the probability that this action was picked by the policy that generated the data. For `--cb_explore_adf`, the action number is meaningless, so just write `0` ¯\\_(ツ)_/¯.
+I was originally pretty confused by the format of `_label` for `--cb_explore_adf`. The label has 3 components, the action number, the cost, and the probability that this action was picked by the policy that generated the data. For `--cb_explore_adf`, the action number is meaningless, so just write `0` ¯\\\_(ツ)\_/¯.
 
 ### Model Architecture
 

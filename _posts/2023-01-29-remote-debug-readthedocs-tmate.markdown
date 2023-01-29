@@ -59,7 +59,7 @@ Ngrok lets you see all incoming requests via a locally running web interface. Op
 
 ### 5. SSH into the running Readthedocs build
 
-Once a webhook comes in, find the fields `ssh_cmd_format` and `stoken`. The `ssh_cmd_format` field should look something like `ssh %s@nyc1.tmate.io`, and gthe `stoken` field should look like a random string of characters.
+Once a webhook comes in, find the fields `ssh_cmd_format` and `stoken`. The `ssh_cmd_format` field should look something like `ssh %s@nyc1.tmate.io`, and the `stoken` field should look like a random string of characters.
 
 <div >
     <img src="/assets/ngrok_webhook_data.png" />
@@ -72,7 +72,7 @@ Just replace the `%s` in the `ssh_cmd_format` with the value in `stoken`, and co
 
 You should now have a working tmate terminal into your running Readthedocs build. Hopefully it should be a breeze to debug from there!
 
-In my case, I solved my docs build bug about 5 minutes after getting this working. In case it's useful to anyone else with the same issue with hybrid Rust/Python apps, the solution was to delete the main module folder containing Python code (`tensor_theorem_prover` in my case) after running `pip install .`. I don't fully understand why this works, but it seems like somehow Python was finding the local folder rather than the compiled wheel with the rust code in it, and deleting the local module folder forced it to find the compiled module instead. ¯\\_(ツ)_/¯
+In my case, I solved my docs build bug about 5 minutes after getting this working. In case it's useful to anyone else with the same issue with hybrid Rust/Python apps, the solution was to delete the main module folder containing Python code (`tensor_theorem_prover` in my case) after running `pip install .`. I don't fully understand why this works, but it seems like somehow Python was finding the local folder rather than the compiled wheel with the rust code in it, and deleting the local module folder forced it to find the compiled module instead. ¯\\\_(ツ)\_/¯
 
 Hopefully this technique is helpful if you're ever stuck debugging Readthedocs builds.
 
