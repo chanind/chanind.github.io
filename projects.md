@@ -12,9 +12,9 @@ Chinese character stroke order animations and practice quizzes
 
 Convert Abstract Meaning Representation (AMR) into first-order logic
 
-# [Fuzzy Reasoner](https://github.com/fuzzy-reasoner/fuzzy-reasoner)
+# [Tensor Theorem Prover](https://github.com/chanind/tensor-theorem-prover)
 
-Simple symbolic reasoner which supports fuzzy unification
+First-order theorem prover which supports embedding unification
 
 # [Curve Matcher](https://github.com/chanind/curve-matcher)
 
