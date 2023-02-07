@@ -133,7 +133,7 @@ The syntax to do this is pretty strange, you need to take the first letter of th
 
 If you want generate features by mixing 3 namespaces together, you can use `--cubic` like `--cubic UAC` or `--cubic UUA`. If you want to mix more than 3 namespace permutations together, you can use `--interactions` to specify any number of namespaces to mix together. For example `--interactions UAXBY` to mix 5 namespaces together.
 
-I think that if there are numeric features, only the value of the last feature in the namespace will be used as the numberic value, so if you have a namespace with a lot of numeric features it should probably go last. (I could be wrong about this!)
+I think that if there are numeric features, only the value of the last feature in the namespace will be used as the numeric value, so if you have a namespace with a lot of numeric features it should probably go last. (I could be wrong about this!)
 
 There's a list of more feature enhancement settings available in the [VW Wiki](https://github.com/VowpalWabbit/vowpal_wabbit/wiki/Command-Line-Arguments#example-manipulation-options).
 
