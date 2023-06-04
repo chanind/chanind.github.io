@@ -185,13 +185,13 @@ If you don't add test cases as you code, you're probably testing manually. Howev
 
 Testing doesn't have to be difficult. If you can test some piece of code in a Pytest test case rather than manually, do it. Some further tips for testing practically:
 
-- Don't be afraid to make your source code uglier to help with testing. If splitting out the core functionality of a function into a separate function is easier to test, do it.
+- Don't be afraid to make your source code uglier if it helps with testing. If splitting out the core functionality of a function into a separate function is easier to test, do it.
 - Don't worry about "unit" vs "integration" tests - just test however is easiest for you. Feel free to mix hyper-focused tests on small functions with tests that run through your whole model. The important thing is to have tests, no matter what kind.
-- If there's stochastic outputs from a function, it's fine to just test that the output looks sane (e.g. tensors have the correct sizes, things that should sum to 1 do, etc...)
+- If there's stochastic outputs from a function, it's fine to just test that the output looks sane (e.g. tensors have the correct sizes, things that should sum to 1 do, etc...). Even basic assertions will still catch a lot of bugs.
 - Use approximate assertions to check that outputs are "close enough". Pytest has `approx` which lets you write assertions like `assert pytest.approx(x) == 3.1`, and torch has `assert torch.allclose(tensor1, tensor2)` to check if tensors are "close enough".
 - Don't be afraid to hardcode output snapshots into tests to aid with algorithm refactoring. It can be helpful to set a random seed and pin down exact outputs so that you can refactor a function for performance and want to make sure you have identical behavior before and after.
 - Feel free to create tiny toy datasets inside of tests, e.g. a list with 5 training examples, and run training on it just to make sure everything works.
-- Use tests as way to debug individual places in your code as you develop. You can stick a debugger statement `import pdb; pdb.set_trace()` into your code, then run a test that runs through that code path so you can interactively experiment as you work.
+- Use tests as way to interacticely debug your code as you develop. You can stick a debugger statement `import pdb; pdb.set_trace()` into your code, then run a test that runs through that code path so you can interactively experiment as you work.
 
 ## Pet peeves with research code
 
@@ -204,6 +204,6 @@ The following are a few things that drive me crazy when reading research code. T
 
 ## Takeaways
 
-If there's a single thing I want to leave you with, it's that code published along with research papers should be usable by others. If you can accomplish that, you're most of the way there. I believe that everything discussed in this article is very achievable for researchers, and is a lot easier than doing research itself, or learning LaTeX, or publishing papers. Researchers are smart people, and none of this is difficult. Once you get used to packaging code into a library that can be installed with `pip install`, it becomes second-nature, and the benefits to your success as a researcher are immense.
+If there's a single thing I want to leave you with, it's that code published along with research papers should be usable by others. If you can accomplish that, you're most of the way there. I believe that everything discussed in this article is very achievable for researchers, and is a lot easier than doing research itself, or learning LaTeX, or publishing papers. Researchers are smart people, and none of this is difficult. Once you get used to packaging code into a library that can be installed with `pip install`, it becomes second-nature, and the benefits to your success as a researcher and to others who want to use your code are immense.
 
 For further reading, I'd recommend this [excellent article on Python best practices](https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project/). It's a couple years old at this point, but I think the ideas in the article are still very valid today.
