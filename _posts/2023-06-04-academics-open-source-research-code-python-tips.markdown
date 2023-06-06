@@ -2,7 +2,6 @@
 layout: post
 title: "Academics: You're Doing Open Source Wrong"
 date: 2023-06-04
-hidden: true
 ---
 
 <div>
