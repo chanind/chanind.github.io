@@ -40,9 +40,9 @@ It should go without saying, but it's not OK to publish code that's completley b
 - **Dependency versions are not pinned:** If you rely on other Python libraries and don't pin a version range, your code is guaranteed to break in 6 months when one of those dependencies makes a breaking change. Don't do this. It's incredibly frustrating needing to go on an archeological dig through PyPI trying to guess what version of each dependency the researcher was probably using.
 
 <div class="center">
-    <div style="display: flex; justify-content: center;">
-        <img style="width: 200px; margin: 0 10px; border: 1px solid #CCC; padding: 5px;" src="/assets/dependencies_fail.png" />
-        <img style="width: 200px; margin: 0 10px; border: 1px solid #CCC; padding: 5px;" src="/assets/dependencies_good.png" />
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+        <img style="width: 200px; margin: 5px 10px; border: 1px solid #CCC; padding: 5px;" src="/assets/dependencies_fail.png" />
+        <img style="width: 200px; margin: 5px 10px; border: 1px solid #CCC; padding: 5px;" src="/assets/dependencies_good.png" />
     </div>
     <i class="small gray">If you don't pin dependency versions, your code is guaranteed to be break</i>
 </div>
