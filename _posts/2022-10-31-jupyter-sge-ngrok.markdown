@@ -74,6 +74,32 @@ The command above just runs jupyter and ngrok in parallel, and kills them both w
 
 Now, ngrok should display a URL on the screen (something like `https://aba4-128-90-27-382.eu.ngrok.io`) which you can open up in your browser, and, voila, you should see your jupyter notebook running inside of your Grid Engine interactive shell! And that's it, you've got Jupyter running inside of Grid Engine.
 
+## Running Jupyter + Ngrok in a SGE job
+
+You can of course run the same commands as a standalone SGE job which you submit with `qsub`. Copy the script below and save it as `remote_jupyter.qsub.sh`. Tweak the parameters as needed to suit your use case.
+
+```bash
+#$ -l mem=10G
+#$ -l h_rt=24:0:0
+#$ -S /bin/bash
+#$ -N remote-jupyter
+
+set -e
+
+# pick a port at random between 7001-7999
+PORT=`shuf -i 7001-7999 -n 1`
+echo "Starting Jupyter and tunnel on port ${PORT}"
+
+# run jupyter in the background and ngrok in the foreground
+# connect to the URL that ngrok outputs to the terminal
+(trap 'kill 0' SIGINT; jupyter notebook --no-browser --port ${PORT} &
+~/ngrok http ${PORT} --log=stdout)
+```
+
+Then, submit the job as usual with `qsub remote_jupyter.qsub.sh`. When the job runs, you'll be able to find the URL of the ngrok session in the logs, or you can check the ngrok web interface at [ngrok.com](https://ngrok.com) and click "tunnels" to find your jupyter notebook.
+
+## Acknowledgements
+
 This post takes a lot of inspiration and ideas from [Khuyen Tran's blog post](https://towardsdatascience.com/how-to-share-your-jupyter-notebook-in-3-lines-of-code-with-ngrok-bfe1495a9c0c). Thanks, Khuyen!
 
 If you have any improvements to this technique, let me know!
