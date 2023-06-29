@@ -37,7 +37,19 @@ At this point, ngrok should be good to go! Next just make sure you have jupyter 
 pip install notebook
 ```
 
-It's a good idea to set a password for jupyter since we're going to make it accessible on the internet in the next section, and you don't want random strangers on the internet to be able to run code in your notebook.
+Since the notebook will be accessed on the web, you'll need to modify the notebook config to allow remote connections. First, ensure you have a jupyter config available by running the following:
+
+```bash
+jupyter notebook --generate-config
+```
+
+This will generate a config file in your home directory, which should be located at `~/.jupyter/jupyter_notebook_config.py`. Run the following command to update this config file and allow remote access:
+
+```bash
+echo "c.NotebookApp.allow_remote_access = True" >> ~/.jupyter/jupyter_notebook_config.py
+```
+
+It's a good idea to set a password for jupyter since we're going to make it accessible on the internet, and you don't want random strangers on the internet to be able to run code in your notebook if they stumble on the URL somehow.
 
 ```bash
 jupyter notebook password
@@ -54,11 +66,14 @@ qrsh -l tmem=10G,h_rt=2:00:00,gpu=true -now no -verbose
 Once your session has started, you need to run both ngrok and Jupyter on the same port. The specific port number doesn't matter much - you just don't want to pick a number that someone else on the same machine might also be using. Below I'm using port 7923, but change this to whatever number you prefer (numbers in the 7000-9999 range tend to be good choices).
 
 ```
-(trap 'kill 0' SIGINT; jupyter notebook --no-browser --port 7923 & ~/ngrok http 7923)
+(trap 'kill 0' SIGINT; jupyter notebook --no-browser --port 7923 &
+~/ngrok http 7923 --log=stdout)
 ```
 
 The command above just runs jupyter and ngrok in parallel, and kills them both when you exit the shell.
 
 Now, ngrok should display a URL on the screen (something like `https://aba4-128-90-27-382.eu.ngrok.io`) which you can open up in your browser, and, voila, you should see your jupyter notebook running inside of your Grid Engine interactive shell! And that's it, you've got Jupyter running inside of Grid Engine.
+
+This post takes a lot of inspiration and ideas from [Khuyen Tran's blog post](https://towardsdatascience.com/how-to-share-your-jupyter-notebook-in-3-lines-of-code-with-ngrok-bfe1495a9c0c). Thanks, Khuyen!
 
 If you have any improvements to this technique, let me know!
