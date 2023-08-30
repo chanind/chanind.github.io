@@ -29,7 +29,7 @@ print(DEFAULT_CA_BUNDLE_PATH)
 # /path/to/python/site-packages/certifi/cacert.pem
 ```
 
-Note the output of the above `cacert.pem` file, and the following to `.bashrc` (or `.bash_profile` or `.zshrc`, etc... depending on your system).
+Note the output of the above `cacert.pem` file, and add the following to `.bashrc` (or `.bash_profile` or `.zshrc`, etc... depending on your system).
 
 ```bash
 export SSL_CERT_FILE=/path/to/python/site-packages/certifi/cacert.pem
