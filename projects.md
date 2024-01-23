@@ -16,6 +16,10 @@ Steering vectors for transformer language models in Pytorch / Huggingface
 
 Linear Relational Embeddings (LREs) and Linear Relational Concepts (LRCs) for LLMs in PyTorch
 
+# [Penman JS](https://github.com/chanind/penman-js)
+
+Javascript port of the Penman Python library for Abstract Meaning Representation (AMR).
+
 # [AMR Logic Converter](https://github.com/chanind/amr-logic-converter)
 
 Convert Abstract Meaning Representation (AMR) into first-order logic
