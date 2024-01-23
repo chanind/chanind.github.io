@@ -8,6 +8,14 @@ permalink: /projects/
 
 Chinese character stroke order animations and practice quizzes
 
+# [Steering Vectors](https://github.com/steering-vectors/steering-vectors)
+
+Steering vectors for transformer language models in Pytorch / Huggingface
+
+# [Linear Relational](https://github.com/chanind/linear-relational)
+
+Linear Relational Embeddings (LREs) and Linear Relational Concepts (LRCs) for LLMs in PyTorch
+
 # [AMR Logic Converter](https://github.com/chanind/amr-logic-converter)
 
 Convert Abstract Meaning Representation (AMR) into first-order logic
